@@ -42,6 +42,13 @@ def load_network(modelpath,input_dim):
 
 	return model, model_stride, input_shape, output_shape
 
+def draw_points(img, pts, pts_scale):
+	for i in range(4):
+		x = pts[0][i] * pts_scale
+		y = pts[1][i] * pts_scale
+		img = cv2.circle(img, (int(x), int(y)), 5, (1,0,0), 5)
+	return img
+
 def process_data_item(data_item,dim,model_stride):
 	XX,llp,pts = augment_sample(data_item[0],data_item[1].pts,dim)
 	YY = labels2output_map(llp,pts,dim,model_stride)
