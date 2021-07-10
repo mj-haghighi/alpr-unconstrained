@@ -2,6 +2,7 @@
 import sys
 import numpy as np
 import cv2
+import random
 import argparse
 import tensorflow.keras as keras
 
@@ -73,7 +74,7 @@ if __name__ == '__main__':
 
 	model,model_stride,xshape,yshape = load_network(args.model,dim)
 
-	opt = getattr(keras.optimizers,args.optimizer)(lr=args.learning_rate)
+	opt = getattr(keras.optimizers,args.optimizer)(learning_rate=args.learning_rate)
 	model.compile(loss=loss, optimizer=opt)
 
 	print('Checking input directory...')
