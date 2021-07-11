@@ -27,7 +27,7 @@ In order to easily run the code, you must have installed the Keras framework wit
 $ cd darknet && make
 ```
 
-**The current version was tested in an Ubuntu 16.04 machine, with Keras 2.2.4, TensorFlow 1.5.0, OpenCV 2.4.9, NumPy 1.14 and Python 2.7.**
+**The current version was tested in an Ubuntu 18.04 machine, with Keras 2.4.3, TensorFlow 2.5.0, OpenCV 4.5.2, NumPy 1.19.5 and Python 3.8.10 .**
 
 ## Download Models
 
